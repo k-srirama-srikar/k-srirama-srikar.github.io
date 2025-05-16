@@ -11,7 +11,7 @@
 	 <!-- Preview image for social media -->
 	<meta property="og:title" content="K Sriama Srikar | Portfolio" />
 	<meta property="og:description" content="Explore my projects, skills, and achievements." />
-	<meta property="og:image" content="static/images/no_padding.png" />
+	<meta property="og:image" content="/images/no_padding.png" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://k-srirama-srikar.github.io/" />
 
@@ -19,7 +19,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="K Srirama Srikar | Portfolio" />
 	<meta name="twitter:description" content="Explore my projects, skills, and achievements." />
-	<meta name="twitter:image" content="static/images/no_padding.png" />
+	<meta name="twitter:image" content="/images/no_padding.png" />
 
 
 </svelte:head>
