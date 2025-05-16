@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Counter from './Counter.svelte';
+	// import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcomeFallback from '$lib/images/svelte-welcome.png';
 </script>
@@ -7,6 +7,21 @@
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="Svelte demo app" />
+	
+	 <!-- Preview image for social media -->
+	<meta property="og:title" content="K Sriama Srikar | Portfolio" />
+	<meta property="og:description" content="Explore my projects, skills, and achievements." />
+	<meta property="og:image" content="$lib/images/no_padding.png" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://k-srirama-srikar.github.io/" />
+
+	<!-- Twitter card (optional) -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="K Srirama Srikar | Portfolio" />
+	<meta name="twitter:description" content="Explore my projects, skills, and achievements." />
+	<meta name="twitter:image" content="$lib/images/no_padding.png" />
+
+
 </svelte:head>
 
 <section>
@@ -18,14 +33,13 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
 	</h1>
 
 	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
+		Hi! I am <strong>K Srirama Srikar</strong>!
 	</h2>
 
-	<Counter />
+	<!-- <Counter /> -->
 </section>
 
 <style>
