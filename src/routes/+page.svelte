@@ -88,7 +88,7 @@
   <div class="absolute -top-32 -left-32 w-[30rem] h-[30rem] bg-purple-600 rounded-full opacity-30 blur-3xl mix-blend-overlay animate-pulse pointer-events-none z-0"></div>
 
   <div class="z-10 max-w-3xl">
-    <h1 class="text-5xl sm:text-6xl font-bold leading-tight mb-6">Hi, I'm <span class="text-purple-400">K Srirama Srikar</span></h1>
+    <h1 class="text-5xl sm:text-6xl font-bold leading-tight mb-6">Hi, I'm <span class="text-gray-400">K Srirama Srikar</span></h1>
     <p class="text-xl text-gray-300">A full stack developer passionate about building beautiful web experiences.</p>
   </div>
 
@@ -101,10 +101,10 @@
 
 	<div class="mt-10 text-center">
 	<a 
-		href="#projects"
-		class="inline-block px-8 py-4 text-lg font-semibold text-gray-900 bg-gradient-to-r from-cyan-300 via-white to-cyan-400 hover:scale-105 transform transition-all duration-300 rounded-full shadow-xl hover:shadow-2xl ring-2 ring-transparent focus:ring-4 focus:ring-cyan-300 focus:outline-none"
+		href="/"
+		class="inline-block px-8 py-4 text-lg font-semibold text-white grey-gradient hover:scale-105 transform transition-all duration-300 rounded-full shadow-xl hover:shadow-2xl ring-2 ring-transparent focus:ring-4 focus:ring-cyan-300 focus:outline-none"
 	>
-		🌟🚀 View Projects
+		🚀 View Projects 🌟
 	</a>
 	</div>
 
