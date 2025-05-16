@@ -9,8 +9,7 @@
 
 <!-- 🌌 Full app layout wrapper -->
 <!-- <div class="flex flex-col min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white"> -->
-<div class="flex flex-col min-h-screen bg-carbon
- text-white">	
+<div class="flex flex-col min-h-screen bg-dark-gradient text-white">	
 	<!-- 🧭 Header -->
 	<Header />
 	

@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	// import { get } from 'svelte/store';
 	import logo from '$lib/images/c2img.png';
-	import github from '$lib/images/github.svg';
+	// import github from '/images/github_logo.png';
 </script>
 
-<header>
+<!-- <header>
 	<div class="corner">
 		<a href="/">
 			<img src={logo} alt="Sri" />
@@ -36,7 +37,60 @@
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
+</header> -->
+<!-- fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/30 border-b border-white/10 -->
+
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-zinc-700 bg-carbon/20 bg-opacity-20 text-white px-6 py-4 flex items-center justify-between z-50">
+	<!-- Logo Left -->
+	<div class="flex items-center gap-2">
+		<a href="/" class="flex items-center gap-2">
+			<img src={logo} alt="Iris" class="h-8 w-auto" />
+			<!-- <span class="text-xl font-bold tracking-wide">Iris</span> -->
+		</a>
+	</div>
+
+	<!-- Nav Right -->
+	<nav class="flex items-center gap-6">
+	<a 
+		href="/" 
+		class="hover:text-indigo-400 transition-colors text-white-700 uppercase duration-200 ease-in-out"
+		aria-current={page.url.pathname === '/' ? 'page' : undefined}
+	>
+		Home
+	</a>
+	<a 
+		href="/about" 
+		class="hover:text-indigo-400 transition-colors text-white"
+		aria-current={page.url.pathname === '/about' ? 'page' : undefined}
+	>
+		About
+	</a>
+	<a 
+		href="/sverdle" 
+		class="hover:text-indigo-400 transition-colors text-white"
+		aria-current={page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}
+	>
+		Sverdle
+	</a>
+	</nav>
+
+
+	<!-- <div class="corner">
+		<a href="https://github.com/k-srirama-srikar">
+			<img src={github} alt="GitHub" />
+		</a>
+	</div> -->
 </header>
+
+<!-- Optional: Floating GitHub link (bottom-left corner) -->
+<!-- <a 
+	href="https://github.com/username" 
+	target="_blank" 
+	rel="noopener noreferrer" 
+	class="fixed bottom-4 left-4 z-50 opacity-70 hover:opacity-100 transition-opacity"
+>
+	<img src={github} alt="GitHub" class="h-6 w-6" />
+</a> -->
 
 <style>
 	header {
@@ -44,7 +98,7 @@
 		justify-content: space-between;
 	}
 
-	.corner {
+	/* .corner {
 		width: 3em;
 		height: 3em;
 	}
@@ -61,7 +115,7 @@
 		width: 2em;
 		height: 2em;
 		object-fit: contain;
-	}
+	} */
 
 	nav {
 		display: flex;
@@ -69,7 +123,7 @@
 		--background: rgba(255, 255, 255, 0.7);
 	}
 
-	svg {
+	/* svg {
 		width: 2em;
 		height: 3em;
 		display: block;
@@ -107,14 +161,14 @@
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
 		border-top: var(--size) solid var(--color-theme-2);
-	}
+	} */
 
 	nav a {
 		display: flex;
 		height: 100%;
 		align-items: center;
 		padding: 0 0.5rem;
-		color: var(--color-text);
+		color: var(--color-theme-2);
 		font-weight: 700;
 		font-size: 0.8rem;
 		text-transform: uppercase;
@@ -123,7 +177,7 @@
 		transition: color 0.2s linear;
 	}
 
-	a:hover {
+	/* a:hover {
 		color: var(--color-theme-2);
-	}
+	} */
 </style>

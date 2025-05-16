@@ -8,8 +8,8 @@
     'Full Stack Developer',
     'Tech Enthusiast',
     'Problem Solver',
-	'Undergraduate Data Science Student',
 	'Machine Learning Enthusiast',
+	'Book Lover',
   ];
   let display = '';
   let index = 0;
@@ -94,7 +94,7 @@
 
    <div class="z-10 max-w-3xl">
     <!-- <h1 class="text-5xl sm:text-6xl font-bold leading-tight mb-4">Hi, I'm <span class="text-purple-400">K Srirama Srikar</span></h1> -->
-    <p class="text-xl text-gray-300 h-8">I am <span class="text-white font-semibold">{display}</span></p>
+    <p class="text-xl text-gray-300 h-8">I am a <span class="text-white font-semibold">{display}</span></p>
 
     <!-- 🔗 Call to Action -->
    
