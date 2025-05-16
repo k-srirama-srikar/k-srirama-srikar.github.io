@@ -2,6 +2,16 @@
 @import '@fontsource/fira-mono';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles here */
+body {
+  @apply bg-gradient-to-br from-[#0f172a] to-[#1e1b4b] text-white;
+  font-family: 'Outfit', sans-serif;
+}
+
 
 :root {
 	--font-body:
@@ -42,13 +52,34 @@ p {
 }
 
 a {
-	color: var(--color-theme-1);
-	text-decoration: none;
+  color: var(--color-theme-2);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s ease-in-out;
+  font-weight: 500;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-theme-2);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
 }
 
 a:hover {
-	text-decoration: underline;
+  color: var(--color-theme-2);
 }
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
 
 h1 {
 	font-size: 2rem;

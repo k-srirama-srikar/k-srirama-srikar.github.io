@@ -1,11 +1,51 @@
 <script lang="ts">
 	// import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcomeFallback from '$lib/images/svelte-welcome.png';
+	// import welcome from '$lib/images/svelte-welcome.webp';
+	// import welcomeFallback from '$lib/images/svelte-welcome.png';
+	import { onMount } from 'svelte';
+
+  let titles = [
+    'Full Stack Developer',
+    'Tech Enthusiast',
+    'Problem Solver',
+	'Undergraduate Data Science Student',
+	'Machine Learning Enthusiast',
+  ];
+  let display = '';
+  let index = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  // Typewriter effect
+  onMount(() => {
+    const type = () => {
+      const current = titles[index];
+      if (isDeleting) {
+        display = current.substring(0, charIndex--);
+      } else {
+        display = current.substring(0, charIndex++);
+      }
+
+      if (!isDeleting && charIndex === current.length + 1) {
+        isDeleting = true;
+        setTimeout(type, 1000);
+        return;
+      }
+
+      if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        index = (index + 1) % titles.length;
+      }
+
+      setTimeout(type, isDeleting ? 60 : 100);
+    };
+
+    type();
+  });
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>K Srirama Srikar</title>
 	<meta name="description" content="Svelte demo app" />
 	
 	 <!-- Preview image for social media -->
@@ -24,7 +64,7 @@
 
 </svelte:head>
 
-<section>
+<!-- <section>
 	<h1>
 		<span class="welcome">
 			<picture>
@@ -39,7 +79,49 @@
 		Hi! I am <strong>K Srirama Srikar</strong>!
 	</h2>
 
-	<!-- <Counter /> -->
+</section> -->
+
+<!-- <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 py-16 bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white overflow-hidden"> -->
+<section class="  justify-center items-center text-center text-white overflow-hidden">
+
+  <!-- 🌟 Glowing Blob Background -->
+  <div class="absolute -top-32 -left-32 w-[30rem] h-[30rem] bg-purple-600 rounded-full opacity-30 blur-3xl mix-blend-overlay animate-pulse pointer-events-none z-0"></div>
+
+  <div class="z-10 max-w-3xl">
+    <h1 class="text-5xl sm:text-6xl font-bold leading-tight mb-6">Hi, I'm <span class="text-purple-400">K Srirama Srikar</span></h1>
+    <p class="text-xl text-gray-300">A full stack developer passionate about building beautiful web experiences.</p>
+  </div>
+
+   <div class="z-10 max-w-3xl">
+    <!-- <h1 class="text-5xl sm:text-6xl font-bold leading-tight mb-4">Hi, I'm <span class="text-purple-400">K Srirama Srikar</span></h1> -->
+    <p class="text-xl text-gray-300 h-8">I am <span class="text-white font-semibold">{display}</span></p>
+
+    <!-- 🔗 Call to Action -->
+   
+
+	<div class="mt-10 text-center">
+	<a 
+		href="#projects"
+		class="inline-block px-8 py-4 text-lg font-semibold text-gray-900 bg-gradient-to-r from-cyan-300 via-white to-cyan-400 hover:scale-105 transform transition-all duration-300 rounded-full shadow-xl hover:shadow-2xl ring-2 ring-transparent focus:ring-4 focus:ring-cyan-300 focus:outline-none"
+	>
+		🌟🚀 View Projects
+	</a>
+	</div>
+
+
+	</div>
+
+  <!-- 🔽 Scroll Down Indicator -->
+  <div class="absolute bottom-10">
+    <!-- <a href="#projects" class="text-purple-300 animate-bounce text-3xl">&#x25BC;</a> -->
+	
+	<svg class="arrows">
+		<path class="a1" d="M0 0 L30 32 L60 0"></path>
+		<path class="a2" d="M0 20 L30 52 L60 20"></path>
+		<path class="a3" d="M0 40 L30 72 L60 40"></path>
+	</svg>
+</div>
+
 </section>
 
 <style>
@@ -48,15 +130,15 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex: 0.6;
+		flex: 1;
 	}
 
 	h1 {
 		width: 100%;
 	}
 
-	.welcome {
-		display: block;
+	/* .welcome { */
+		/* display: block;
 		position: relative;
 		width: 100%;
 		height: 0;
@@ -69,5 +151,55 @@
 		height: 100%;
 		top: 0;
 		display: block;
+	} */
+
+
+	 .arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
 	}
+
+	.arrows path {
+	stroke: #2994D1;
+	fill: transparent;
+	stroke-width: 1px;  
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+	}
+
+	@keyframes arrow
+	{
+	0% {opacity:0}
+	40% {opacity:1}
+	80% {opacity:0}
+	100% {opacity:0}
+	}
+
+	@-webkit-keyframes arrow /*Safari and Chrome*/
+	{
+	0% {opacity:0}
+	40% {opacity:1}
+	80% {opacity:0}
+	100% {opacity:0}
+	}
+
+	.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+	}
+
+	.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+	}
+
+	.arrows path.a3 { 
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+	}
+
 </style>

@@ -4,7 +4,14 @@ module.exports = {
     './src/**/*.{html,js,svelte,ts}'
   ],
   theme: {
-    extend: {},
+    extend: {
+    fontFamily: {
+        outfit: ['Outfit', 'sans-serif']
+    }
+    },
+    backgroundImage: {
+    'hero-gradient': 'radial-gradient(circle at 50% 0%, #1e1b4b, #0f172a)',
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),
