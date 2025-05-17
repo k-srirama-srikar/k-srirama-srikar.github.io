@@ -1,4 +1,4 @@
-# sv
+<!-- # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
@@ -35,4 +35,18 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment. -->
+
+
+
+# Hi! I'm K Srirama Srikar!!
+
+I'm an Undergrad at IIT Palakkad majoring in Data Science...
+
+Below are few of my really cool projects
+
+|  |  |
+| --- | --- |
+| Neo Logs | A blogging platform built using ReactJS, Go and PostgreSQL |
+| Ride Sharing Application | An uber-like application with a car pooling option |
+| Chibi Tensor | A from scratch deep learning framework in C++ and CUDA with python bindings |

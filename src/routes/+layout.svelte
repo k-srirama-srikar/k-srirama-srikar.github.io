@@ -9,22 +9,38 @@
 
 <!-- 🌌 Full app layout wrapper -->
 <!-- <div class="flex flex-col min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white"> -->
-<div class="flex flex-col min-h-screen bg-dark-gradient text-white">	
-	<!-- 🧭 Header -->
-	<Header />
-	
-	<div class="fixed top-0 left-0 w-[30rem] h-[30rem] bg-purple-600/20 blur-3xl rounded-full pointer-events-none mix-blend-overlay animate-pulse z-0"></div>
-
-	<!-- 📦 Page content -->
-	<main class="flex-1 flex flex-col px-4 py-8 w-full max-w-4xl mx-auto box-border">
+	<!-- <div class="flex flex-col min-h-screen bg-dark-gradient text-white">	 -->
+		<!-- 🧭 Header -->
+		
+		<div class="flex flex-col min-h-screen">
+		<Header />
+		<section class="bg-shooting">
+		{#each Array(10) as _, i}
+			<span
+			class="shooting-star"
+			style="
+				top: {Math.random() * 100}vh;
+				right: {Math.random() * 100}vw;
+				animation-delay: {Math.random() * 3}s;
+				animation-duration: {1 + Math.random() * 2.5}s;
+			"
+			></span>
+		{/each}
+		</section>
 		<slot />
-	</main>
-
-	<!-- 🦶 Footer -->
-	<footer class="flex flex-col justify-center items-center py-3">
-		<p>© 2025 by K Srirama Srikar</p>
-	</footer>
-</div>
+		<!-- <div class="fixed top-0 left-0 w-[30rem] h-[30rem] bg-purple-600/20 blur-3xl rounded-full pointer-events-none mix-blend-overlay animate-pulse z-0"></div> -->
+		
+		<!-- 📦 Page content -->
+		<!-- <main class="flex-1 flex flex-col px-4 py-8 w-full max-w-4xl mx-auto box-border"> -->
+			<!-- <slot /> -->
+			<!-- </main> -->
+			
+			<!-- 🦶 Footer -->
+			<footer class="flex flex-col justify-center items-center py-3">
+				<p>© 2025 by K Srirama Srikar</p>
+			</footer>
+			<!-- </div> -->
+		</div>
 
 <style>
 	/* .app {
