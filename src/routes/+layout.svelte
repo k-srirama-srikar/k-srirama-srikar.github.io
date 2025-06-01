@@ -39,7 +39,7 @@
 				<a href="#education" class="hover:underline">Education</a>
 				<a href="#experience" class="hover:underline">Experience</a>
 				<a href="#contact" class="hover:underline">Contact Me</a>
-				<a href="/resume.pdf" class="hover:underline" target="_blank">Resume</a>
+				<a href="/" class="hover:underline" target="_blank">Resume</a>
 			</nav>
 		</aside>
 
