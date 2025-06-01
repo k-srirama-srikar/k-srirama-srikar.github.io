@@ -82,7 +82,7 @@
 </section> -->
 
 <!-- <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 py-16 bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white overflow-hidden"> -->
-<section class="min-h-screen  justify-center items-center text-center text-white overflow-hidden">
+<section class="min-h-screen  justify-center items-center text-center text-white ">
 
   <!-- 🌟 Glowing Blob Background -->
   <div class="absolute -top-32 -left-32 w-[30rem] h-[30rem] bg-purple-600 rounded-full opacity-30 blur-3xl mix-blend-overlay animate-pulse pointer-events-none z-0"></div>

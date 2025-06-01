@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from './Header.svelte';
 	import '../app.css';
+	import sri from '$lib/images/c2img.png'
 
 	// let { children } = $props();
 </script>
@@ -27,6 +28,22 @@
 			></span>
 		{/each}
 		</section>
+
+		<!-- Sidebar -->
+		 <div class="grid grid-cols-layout min-h-screen text-white">
+		<aside class="fixed h-screen top-[65px] left-0 h-[calc(100vh-4rem)] w-[20%] px-8 py-10 flex flex-col items-center z-50 backdrop-blur-sm">
+			<img src="{sri}" alt="Profile" class="rounded-full w-24 h-24 mb-4" />
+			<nav class="flex flex-col gap-2 text-sm">
+				<a href="#about" class="hover:underline">About</a>
+				<a href="#projects" class="hover:underline">Projects</a>
+				<a href="#education" class="hover:underline">Education</a>
+				<a href="#experience" class="hover:underline">Experience</a>
+				<a href="#contact" class="hover:underline">Contact Me</a>
+				<a href="/resume.pdf" class="hover:underline" target="_blank">Resume</a>
+			</nav>
+		</aside>
+
+
 		<slot />
 		<!-- <div class="fixed top-0 left-0 w-[30rem] h-[30rem] bg-purple-600/20 blur-3xl rounded-full pointer-events-none mix-blend-overlay animate-pulse z-0"></div> -->
 		
@@ -40,6 +57,7 @@
 				<p>© 2025 by siri</p>
 			</footer>
 			<!-- </div> -->
+		</div>
 		</div>
 
 <style>

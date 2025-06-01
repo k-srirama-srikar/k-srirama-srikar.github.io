@@ -3,6 +3,7 @@
 	// import { get } from 'svelte/store';
 	import logo from '$lib/images/c2img.png';
 	// import github from '/images/github_logo.png';
+	import neutab from '$lib/images/neutab.png';
 </script>
 
 <!-- <header>
@@ -70,7 +71,7 @@
 		class="hover:text-indigo-400 transition-colors text-white"
 		aria-current={page.url.pathname === '#projects' ? 'page' : undefined}
 	>
-		Projects
+		Projects <img src={neutab} alt="New tab" height="30" width="30"/>
 	</a>
 	<a 
 		href="/sverdle" 
