@@ -14,7 +14,7 @@
 		
 		<div class="flex flex-col min-h-screen">
 		<Header />
-		<section class="bg-shooting">
+		<section class="fixed inset-0 -z-10 bg-shooting">
 		{#each Array(10) as _, i}
 			<span
 			class="shooting-star"
@@ -37,7 +37,7 @@
 			
 			<!-- 🦶 Footer -->
 			<footer class="flex flex-col justify-center items-center py-3">
-				<p>© 2025 by K Srirama Srikar</p>
+				<p>© 2025 by siri</p>
 			</footer>
 			<!-- </div> -->
 		</div>
@@ -77,4 +77,6 @@
 			padding: 12px 0;
 		}
 	}
+
+	
 </style>

@@ -40,7 +40,7 @@
 </header> -->
 <!-- fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/30 border-b border-white/10 -->
 
-<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-zinc-700 bg-carbon/20 bg-opacity-20 text-white px-6 py-4 flex items-center justify-between z-50">
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-sm border-b border-zinc-700 bg-carbon/20 bg-opacity-20 text-white px-6 py-4 flex items-center justify-between z-50">
 	<!-- Logo Left -->
 	<div class="flex items-center gap-2">
 		<a href="/" class="flex items-center gap-2">
@@ -59,11 +59,18 @@
 		Home
 	</a>
 	<a 
-		href="/about" 
+		href="#about" 
 		class="hover:text-indigo-400 transition-colors text-white"
-		aria-current={page.url.pathname === '/about' ? 'page' : undefined}
+		aria-current={page.url.pathname === '#about' ? 'page' : undefined}
 	>
 		About
+	</a>
+	<a 
+		href="#projects" 
+		class="hover:text-indigo-400 transition-colors text-white"
+		aria-current={page.url.pathname === '#projects' ? 'page' : undefined}
+	>
+		Projects
 	</a>
 	<a 
 		href="/sverdle" 
