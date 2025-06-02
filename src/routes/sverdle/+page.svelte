@@ -88,7 +88,7 @@
 <svelte:window onkeydown={keydown} />
 
 <svelte:head>
-	<title>Sverdle</title>
+	<title>K Srirama Srikar | Sverdle</title>
 	<meta name="description" content="A Wordle clone written in SvelteKit" />
 </svelte:head>
 
@@ -207,6 +207,7 @@
 		justify-content: center;
 		gap: 1rem;
 		flex: 1;
+		padding-top: 64px;
 	}
 
 	.how-to-play {

@@ -30,21 +30,27 @@
 		</section>
 
 		<!-- Sidebar -->
-		 <div class="grid grid-cols-layout min-h-screen text-white">
-		<aside class="fixed h-screen top-[65px] left-0 h-[calc(100vh-4rem)] w-[20%] px-8 py-10 flex flex-col items-center z-50 backdrop-blur-sm">
-			<img src="{sri}" alt="Profile" class="rounded-full w-24 h-24 mb-4" />
-			<nav class="flex flex-col gap-2 text-sm">
+		 <div class="grid grid-cols--[20%_80%] min-h-screen text-white">
+		<aside class="fixed h-screen top-[65px] left-0 h-[calc(100vh-4rem)] w-[20%] px-8 py-10 flex flex-col text-center items-center z-50 backdrop-blur-sm  border-r border-gray-300">
+			<a href="/"><img src="{sri}" alt="Profile" class="rounded-full w-24 h-24 mb-4" /></a>
+			<nav class="flex flex-col gap-2 text-sm w-full">
+				<div class="or-spacer"></div>
 				<a href="#about" class="hover:underline">About</a>
+				<div class="or-spacer"></div>
 				<a href="#projects" class="hover:underline">Projects</a>
+				<div class="or-spacer"></div>
 				<a href="#education" class="hover:underline">Education</a>
+				<div class="or-spacer"></div>
 				<a href="#experience" class="hover:underline">Experience</a>
+				<div class="or-spacer"></div>
 				<a href="#contact" class="hover:underline">Contact Me</a>
+				<div class="or-spacer"></div>
 				<a href="/" class="hover:underline" target="_blank">Resume</a>
 			</nav>
 		</aside>
 
-
-		<slot />
+		<main class="ml-[20vw] w-[80vw] min-h-[calc(100vh-4rem)] overflow-y-auto pt-10 px-8">
+		<slot /></main>
 		<!-- <div class="fixed top-0 left-0 w-[30rem] h-[30rem] bg-purple-600/20 blur-3xl rounded-full pointer-events-none mix-blend-overlay animate-pulse z-0"></div> -->
 		
 		<!-- 📦 Page content -->

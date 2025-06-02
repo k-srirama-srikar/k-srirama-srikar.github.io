@@ -101,12 +101,13 @@
 
 	<div class="mt-10 text-center">
 	<a 
-		href="/"
-		class="inline-block px-8 py-4 text-lg font-semibold text-white grey-gradient hover:scale-105 transform transition-all duration-300 rounded-full shadow-xl hover:shadow-2xl ring-2 ring-transparent focus:ring-4 focus:ring-cyan-300 focus:outline-none"
+		href="#projects"
+		class="inline-block px-8 py-4 text-lg font-semibold text-white grey-gradient transform transition-all duration-300 rounded-full shadow-xl hover:scale-105 hover:shadow-xl active:scale-95 active:shadow-inner ring-2 ring-transparent focus:outline-none focus:ring-0"
 	>
 		🚀 View Projects 🌟
 	</a>
 	</div>
+
 
 
 	</div>
@@ -132,6 +133,22 @@
 <section id="projects" class="min-h-screen px-8 py-20 text-white ">
 	<h2 class="text-4xl font-semibold mb-4">Projects</h2>
 	<p>Projects content...</p>
+</section>
+
+
+<section id="education" class="min-h-screen px-8 py-20 text-white ">
+	<h1 class="text-3xl mb-4">Education</h1>
+	<p>Your academic background.</p>
+</section>
+
+<section id="experience" class="min-h-screen px-8 py-20 text-white ">
+	<h1 class="text-3xl mb-4">Experience</h1>
+	<p>Work experience goes here.</p>
+</section>
+
+<section id="contact" class="min-h-screen px-8 py-20 text-white ">
+	<h1 class="text-3xl mb-4">Contact Me</h1>
+	<p>Email or contact form.</p>
 </section>
 
 <style>
