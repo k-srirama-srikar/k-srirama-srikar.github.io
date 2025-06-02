@@ -35,15 +35,15 @@
 			<a href="/"><img src="{sri}" alt="Profile" class="rounded-full w-24 h-24 mb-4" /></a>
 			<nav class="flex flex-col gap-2 text-sm w-full">
 				<div class="or-spacer"></div>
-				<a href="#about" class="hover:underline">About</a>
+				<a href="/#about" class="hover:underline">About</a>
 				<div class="or-spacer"></div>
-				<a href="#projects" class="hover:underline">Projects</a>
+				<a href="/#projects" class="hover:underline">Projects</a>
 				<div class="or-spacer"></div>
-				<a href="#education" class="hover:underline">Education</a>
+				<a href="/#education" class="hover:underline">Education</a>
 				<div class="or-spacer"></div>
-				<a href="#experience" class="hover:underline">Experience</a>
+				<a href="/#experience" class="hover:underline">Experience</a>
 				<div class="or-spacer"></div>
-				<a href="#contact" class="hover:underline">Contact Me</a>
+				<a href="/#contact" class="hover:underline">Contact Me</a>
 				<div class="or-spacer"></div>
 				<a href="/" class="hover:underline" target="_blank">Resume</a>
 			</nav>

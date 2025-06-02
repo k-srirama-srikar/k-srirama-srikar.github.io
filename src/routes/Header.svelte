@@ -60,14 +60,14 @@
 		Home
 	</a>
 	<a 
-		href="#about" 
+		href="/#about" 
 		class="hover:text-indigo-400 transition-colors text-white"
 		aria-current={page.url.pathname === '#about' ? 'page' : undefined}
 	>
 		About
 	</a>
 	<a 
-		href="#projects" 
+		href="/#projects" 
 		class="hover:text-indigo-400 transition-colors text-white"
 		aria-current={page.url.pathname === '#projects' ? 'page' : undefined}
 	>
