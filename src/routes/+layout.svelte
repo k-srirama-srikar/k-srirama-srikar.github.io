@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Header from './Header.svelte';
 	import '../app.css';
-	import sri from '$lib/images/c2img.png'
+	import sri from '$lib/images/c2img.png';
+	import MobileHeader from './MobileHeader.svelte';
 
 	// let { children } = $props();
 </script>
@@ -14,7 +15,15 @@
 		<!-- 🧭 Header -->
 		
 		<div class="flex flex-col min-h-screen">
-		<Header />
+		<!-- Desktop header -->
+		<div class="hidden md:block">
+			<Header />
+		</div>
+		<!-- Mobile Header -->
+		<div class="md:hidden">
+			<MobileHeader />
+		</div>
+
 		<section class="fixed inset-0 -z-10 bg-shooting">
 		{#each Array(10) as _, i}
 			<span
@@ -31,7 +40,7 @@
 
 		<!-- Sidebar -->
 		 <div class="grid grid-cols--[20%_80%] min-h-screen text-white">
-		<aside class="fixed h-screen top-[65px] left-0 h-[calc(100vh-4rem)] w-[20%] px-8 py-10 flex flex-col text-center items-center z-50 backdrop-blur-sm  border-r border-gray-300">
+		<aside class="fixed hidden md:block h-screen top-[65px] left-0 h-[calc(100vh-4rem)] w-[20%] px-8 py-10 flex flex-col text-center items-center z-50 backdrop-blur-sm  border-r border-gray-300">
 			<a href="/"><img src="{sri}" alt="Profile" class="rounded-full w-24 h-24 mb-4" /></a>
 			<nav class="flex flex-col gap-2 text-sm w-full">
 				<div class="or-spacer"></div>
@@ -49,7 +58,8 @@
 			</nav>
 		</aside>
 
-		<main class="ml-[20vw] w-[80vw] min-h-[calc(100vh-4rem)] overflow-y-auto pt-10 px-8">
+		<!-- <main class="ml-[20vw] w-[80vw] min-h-[calc(100vh-4rem)] overflow-y-auto pt-10 px-8"> -->
+		<main class="w-full md:w-4/5 md:ml-auto min-h-[calc(100vh-4rem)] overflow-y-auto pt-10 px-4 md:px-8">
 		<slot /></main>
 		<!-- <div class="fixed top-0 left-0 w-[30rem] h-[30rem] bg-purple-600/20 blur-3xl rounded-full pointer-events-none mix-blend-overlay animate-pulse z-0"></div> -->
 		
