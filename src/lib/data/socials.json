@@ -1,0 +1,32 @@
+[
+  {
+    "id": "github",
+    "label": "GitHub",
+    "href": "https://github.com/k-srirama-srikar",
+    "icon": "github"
+  },
+  {
+    "id": "linkedin",
+    "label": "LinkedIn",
+    "href": "https://linkedin.com/in/srirama-srikar",
+    "icon": "linkedin"
+  },
+  {
+    "id": "gitlab",
+    "label": "GitLab",
+    "href": "https://gitlab.com/ksriramasrikar",
+    "icon": "gitlab"
+  },
+  {
+    "id": "codeberg",
+    "label": "Codeberg",
+    "href": "https://codeberg.org/sri-sri",
+    "icon": "codeberg"
+  },
+  {
+    "id": "email",
+    "label": "Email",
+    "href": "mailto:ksriramasrikar@gmail.com",
+    "icon": "mail"
+  }
+]

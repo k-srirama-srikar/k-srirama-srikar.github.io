@@ -14,9 +14,14 @@
 		"lint": "prettier --check ."
 	},
 	"devDependencies": {
+		"@fontsource/eb-garamond": "^5.3.0",
 		"@fontsource/fira-mono": "^5.0.0",
+		"@fontsource/inter": "^5.3.0",
+		"@fontsource/newsreader": "^5.3.0",
+		"@fontsource/source-serif-4": "^5.3.0",
 		"@neoconfetti/svelte": "^2.0.0",
 		"@sveltejs/adapter-auto": "^6.0.1",
+		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@tailwindcss/forms": "^0.5.9",

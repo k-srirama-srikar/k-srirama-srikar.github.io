@@ -1,0 +1,24 @@
+[
+  {
+    "id": "yacc",
+    "org": "Yet Another Coding Club (YACC)",
+    "description": "Student-led competitive programming and developer community at IIT Palakkad, fostering technical mentorship, algorithmic workshops, and institute-wide hackathons.",
+    "logo": "/images/clubs/yacc.svg",
+    "roles": [
+      {
+        "role": "Head",
+        "startDate": "2026-04",
+        "endDate": "present"
+      },
+      {
+        "role": "Associate",
+        "startDate": "2024-04",
+        "endDate": "2026-03"
+      }
+    ],
+    "highlights": [
+      "Mentored junior undergraduates in data structures, algorithms, and contest preparation for ICPC, Codeforces, and LeetCode.",
+      "Organized technical workshops, algorithmic problem-setting sessions, and coding competitions."
+    ]
+  }
+]

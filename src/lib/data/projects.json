@@ -1,0 +1,123 @@
+[
+  {
+    "slug": "browser-engine",
+    "title": "Custom Browser Engine",
+    "featured": true,
+    "startDate": "2026-04",
+    "endDate": "2026-04",
+    "category": "Systems & Graphics",
+    "stack": ["C++23", "SDL3", "Lua 5.4", "libcurl", "CMake"],
+    "summary": "A from-scratch lightweight browser engine built in modern C++23, featuring custom tokenization, DOM tree representation, Flexbox-inspired layout, and an embedded Lua 5.4 scripting runtime.",
+    "overview": "Built as part of Tech GC at IIT Palakkad, Browser-- is a lightweight, high-performance browser engine written entirely from scratch in modern C++23. Unlike web wrappers, it implements its own parser, hierarchical DOM data structure, box model layout calculator, SDL3 hardware-accelerated renderer, and embedded Lua scripting runtime that provides reactive client-side interactivity.",
+    "highlights": [
+      "Built a complete browser engine with a JSON/HTML-based parser, DOM-like element tree, Flexbox-inspired layout engine, and smooth viewport scrolling.",
+      "Implemented an embedded Lua 5.4 runtime with isolated per-tab execution contexts, DOM querying and mutation APIs, event callbacks, and reactive content updates.",
+      "Designed a robust multi-tab architecture supporting up to 32 tabs with isolated DOM state, Lua runtime environments, event dispatchers, URL history, scrolling state, and asynchronous HTTP/HTTPS resource loading with caching."
+    ],
+    "approach": "The core engine architecture decouples layout and rendering into a clean multi-stage pipeline: (1) Lexical analysis and document tree construction, (2) Layout computation with recursive box-model and flexbox alignment passes, and (3) SDL3 rasterization with viewport clipping. For interactivity, each tab creates an isolated Lua state and binds C++ callbacks directly to Lua tables representing DOM nodes. Asynchronous networking via libcurl ensures resource downloads do not block UI dispatch or rendering loops.",
+    "links": {
+      "github": "https://github.com/k-srirama-srikar/browser-minus-minus"
+    },
+    "hasCaseStudy": true
+  },
+  {
+    "slug": "tiger-compiler",
+    "title": "Tiger Language Compiler to MIPS Assembly",
+    "featured": true,
+    "startDate": "2026-01",
+    "endDate": "2026-05",
+    "category": "Compilers & Systems",
+    "stack": ["OCaml", "Menhir", "ocamllex", "Dune", "MIPS Assembly"],
+    "summary": "A complete optimizing compiler pipeline from Tiger language to MIPS assembly, implementing lexing, LALR parsing, type checking, intermediate representation (Tree IR), and graph-coloring register allocation.",
+    "overview": "Developed as an in-depth course project for Compiler Design at IIT Palakkad, this compiler translates Tiger, a statically typed imperative programming language with nested functions, arrays, records, and heap allocation, into SPIM-compatible MIPS assembly. The project spans every phase of modern compiler engineering using pure functional OCaml.",
+    "highlights": [
+      "Implemented a complete Tiger-to-MIPS compiler pipeline spanning lexical analysis, parsing, semantic processing, intermediate representation, and SPIM-compatible code generation.",
+      "Built IR lowering, canonicalization, and stack-based register allocation with spill handling for expressions, control flow, loops, function calls, and runtime operations.",
+      "Designed static escape analysis for variables in nested function scopes and generated activation frames adhering to MIPS calling conventions."
+    ],
+    "approach": "The compiler frontend uses ocamllex and Menhir to produce typed Abstract Syntax Trees with exact source span tracking. Semantic analysis performs type checking and escape analysis before translating AST nodes into Appel's Tree Intermediate Representation. The backend canonicalizes Tree IR into basic blocks and traces, performs maximal munch instruction selection for the target MIPS ISA, and executes interference-graph-based register allocation with spilling.",
+    "links": {
+      "note": "Course Project: Private GitLab Repository (Source available on request)"
+    },
+    "hasCaseStudy": true
+  },
+  {
+    "slug": "ride-sharing-application",
+    "title": "Ride Sharing & Pooling Platform",
+    "featured": true,
+    "startDate": "2025-03",
+    "endDate": "2025-04",
+    "category": "Distributed Systems & Backend",
+    "stack": ["React", "Django REST Framework", "PostgreSQL", "PostGIS", "JWT"],
+    "summary": "A scalable mobility and carpooling platform backend featuring sub-10ms geospatial driver-rider matching via PostGIS GiST spatial indexing, transactional seat reservation, and secure JWT authentication.",
+    "overview": "An end-to-end carpooling coordination and real-time geospatial matching platform. Engineered with Django REST Framework and PostgreSQL/PostGIS, the backend optimizes driver routing, spatial radius queries, concurrent seat reservation, and secure payment processing.",
+    "highlights": [
+      "Built a backend-focused ride-sharing and pooling platform with Django REST APIs for rider/driver management, ride lifecycle, pooling, payments, ratings, and authentication.",
+      "Implemented geospatial matching and driver-location queries using PostGIS types and GiST indexes, with relational state models for rides, pooled capacity, driver availability, and payments.",
+      "Ensured ACID consistency across concurrent ride bookings with transactional database locking and capacity checks."
+    ],
+    "approach": "Driver matching queries utilize spatial GiST indices on PostGIS Geography types with ST_DWithin to identify eligible drivers within dynamic radiuses under sub-10ms response times. Ride pooling calculates route overlaps and capacity constraints within a database transaction boundary to eliminate overbooking conditions.",
+    "links": {
+      "github": "https://github.com/k-srirama-srikar/ride-sharing-application"
+    },
+    "hasCaseStudy": true
+  },
+  {
+    "slug": "neo-logs",
+    "title": "Neo-Logs: Full-Stack Blogging Platform",
+    "featured": false,
+    "startDate": "2024-06",
+    "endDate": "2024-08",
+    "category": "Full-Stack Web Engineering",
+    "stack": ["ReactJS", "Go", "Go Fiber", "PostgreSQL", "pgxpool", "JWT", "Axios", "Markdown"],
+    "summary": "A full-stack blogging and developer publishing platform engineered with ReactJS, Go Fiber, and PostgreSQL, featuring Markdown rendering, recursive nested discussions up to depth 5, JWT authentication, and high-performance connection pooling.",
+    "overview": "Neo-Logs is a full-stack, markdown-native publishing and community blogging platform designed for technical authors. The architecture pairs a responsive ReactJS SPA on the frontend with a high-throughput, low-latency Go backend powered by Go Fiber and PostgreSQL via pgxpool. The platform provides full authoring lifecycles, tag-based discovery, user follow graphs, and recursive comment trees.",
+    "highlights": [
+      "Engineered an interactive ReactJS frontend with live Markdown parsing, tag filtering, customizable author profiles, and real-time form validation.",
+      "Developed a high-performance Go Fiber REST backend with modular route handlers, JWT authentication middleware, and structured request logging.",
+      "Implemented a hierarchical discussion system supporting nested comments up to 5 levels of depth using optimized recursive database queries in PostgreSQL.",
+      "Leveraged pgxpool connection pooling to minimize connection overhead, ensuring sub-millisecond query response times under high read/write concurrency."
+    ],
+    "approach": "The backend utilizes Go Fiber's zero-allocation routing and lightweight middleware for rapid JSON serialization and JWT verification. To support hierarchical comment threads up to depth 5 without N+1 query overhead, the PostgreSQL database schema uses parent-child foreign key references with indexing on post and parent IDs. The React frontend interfaces via an Axios API client with automatic token refreshing and optimistic UI updates for comments and follow interactions.",
+    "links": {
+      "github": "https://github.com/k-srirama-srikar/Neo-Logs",
+      "backend": "https://github.com/k-srirama-srikar/Neo-Logs-Backend",
+      "demo": "https://neologs.vercel.app"
+    },
+    "hasCaseStudy": true
+  },
+  {
+    "slug": "ai-interview-simulator",
+    "title": "AI Interview Simulator",
+    "featured": false,
+    "startDate": "2024",
+    "endDate": "2024",
+    "category": "AI & Audio Engineering",
+    "stack": ["Python", "Google Gemini API", "AssemblyAI", "Speech-to-Text"],
+    "summary": "An automated technical interview practice simulator powered by Google Gemini and AssemblyAI real-time speech-to-text processing.",
+    "highlights": [
+      "Real-time voice processing and AI-driven feedback loop evaluating technical candidate responses."
+    ],
+    "links": {
+      "github": "https://github.com/k-srirama-srikar/AI-Interview-Simulator"
+    },
+    "hasCaseStudy": false
+  },
+  {
+    "slug": "lens-and-photo-editor",
+    "title": "Lens & Photo Editor Application",
+    "featured": false,
+    "startDate": "2024",
+    "endDate": "2024",
+    "category": "Computer Vision",
+    "stack": ["Python", "OpenCV", "Tkinter", "NumPy"],
+    "summary": "A desktop image manipulation application featuring facial landmark detection, dynamic Snapchat-style AR filters, and editing filters.",
+    "highlights": [
+      "Real-time webcam video stream processing and filter overlays using OpenCV cascade classifiers."
+    ],
+    "links": {
+      "github": "https://github.com/k-srirama-srikar/Lens-and-Photo-Editor-Application"
+    },
+    "hasCaseStudy": false
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "languages",
+    "label": "Programming Languages",
+    "items": ["C", "C++", "Python", "OCaml", "Go", "JavaScript", "TypeScript", "SQL", "Scala"]
+  },
+  {
+    "id": "systems-data",
+    "label": "Systems & Data Infrastructure",
+    "items": ["Apache Spark", "Apache Iceberg", "Apache Kafka", "Apache Airflow", "PostgreSQL", "PostGIS", "MongoDB", "Apache Hudi"]
+  },
+  {
+    "id": "web-backend",
+    "label": "Web & Frameworks",
+    "items": ["Svelte", "SvelteKit", "ReactJS", "Django REST Framework", "Flask", "Node.js", "Tailwind CSS", "HTML5", "CSS3"]
+  },
+  {
+    "id": "tools-devops",
+    "label": "Tools & DevOps",
+    "items": ["Git", "Docker", "Kubernetes", "Linux / Bash", "CMake", "Dune", "Jenkins", "Postman", "CI/CD"]
+  }
+]

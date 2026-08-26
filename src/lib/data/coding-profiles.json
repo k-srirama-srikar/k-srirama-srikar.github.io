@@ -1,0 +1,42 @@
+[
+  {
+    "id": "codeforces",
+    "platform": "Codeforces",
+    "handle": "little_ghost",
+    "href": "https://codeforces.com/profile/little_ghost",
+    "title": "Specialist",
+    "rating": "1471",
+    "maxRating": "1471",
+    "badgeColor": "text-cyan-500",
+    "note": "Regular participant in Div. 2 and Div. 3 rounds."
+  },
+  {
+    "id": "leetcode",
+    "platform": "LeetCode",
+    "handle": "k_srirama_srikar",
+    "href": "https://leetcode.com/k_srirama_srikar",
+    "title": "Knight",
+    "rating": "1917",
+    "problemsSolved": "500+",
+    "badgeColor": "text-amber-500",
+    "note": "Top 5% globally, solved 500+ problems across DSA categories."
+  },
+  {
+    "id": "atcoder",
+    "platform": "AtCoder",
+    "handle": "sri_sri",
+    "href": "https://atcoder.jp/users/sri_sri",
+    "title": "Active Contestant",
+    "badgeColor": "text-emerald-500",
+    "note": "Regular contestant in AtCoder Beginner Contests (ABC)."
+  },
+  {
+    "id": "icpc",
+    "platform": "ICPC",
+    "handle": "FME2AJYZ4PU7",
+    "href": "https://icpc.global/ICPCID/FME2AJYZ4PU7",
+    "title": "Regionalist",
+    "note": "ICPC Amritapuri Regionals 2025 Ranked 139/309 Teams.",
+    "badgeColor": "text-indigo-500"
+  }
+]
