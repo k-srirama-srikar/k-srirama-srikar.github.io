@@ -1,15 +1,44 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import Icon from '$lib/components/Icon.svelte';
+	import SEO from '$lib/components/SEO.svelte';
+	import { SITE_URL, createBreadcrumbSchema } from '$lib/seo';
 
 	let { data }: { data: PageData } = $props();
 	const project = $derived(data.project);
+
+	const breadcrumbSchema = $derived(
+		createBreadcrumbSchema([
+			{ name: 'Home', url: `${SITE_URL}/` },
+			{ name: 'Projects', url: `${SITE_URL}/projects` },
+			{ name: project.title, url: `${SITE_URL}/projects/${project.slug}` }
+		])
+	);
+
+	const softwareSchema = $derived({
+		'@context': 'https://schema.org',
+		'@type': 'SoftwareSourceCode',
+		name: project.title,
+		description: project.summary,
+		programmingLanguage: project.stack.join(', '),
+		author: {
+			'@type': 'Person',
+			name: 'Kakaraparty Srirama Srikar',
+			url: `${SITE_URL}/`
+		},
+		codeRepository: project.links.github || undefined,
+		url: `${SITE_URL}/projects/${project.slug}`
+	});
 </script>
 
-<svelte:head>
-	<title>{project.title} · Overview · Kakaraparty Srirama Srikar</title>
-	<meta name="description" content="{project.summary}" />
-</svelte:head>
+<SEO
+	title="{project.title} · Overview · Kakaraparty Srirama Srikar"
+	description="{project.summary}"
+	canonicalUrl="{SITE_URL}/projects/{project.slug}"
+	type="article"
+	keywords="{project.title}, {project.stack.join(', ')}, Kakaraparty Srirama Srikar, IIT Palakkad"
+	structuredData={[breadcrumbSchema, softwareSchema]}
+/>
 
 <div class="py-8 sm:py-12 max-w-3xl mx-auto space-y-8">
 	<!-- Top Breadcrumb -->
@@ -38,7 +67,7 @@
 			{/if}
 		</div>
 
-		<h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text-main)] leading-tight">
+		<h1 class="text-2xl sm:text-3xl font-semibold tracking-tight text-[var(--text-main)] leading-tight">
 			{project.title}
 		</h1>
 
@@ -62,7 +91,7 @@
 					href={project.links.github}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs sm:text-sm font-medium text-white bg-[var(--accent)] hover:bg-[var(--accent-hover)] shadow-xs transition-colors"
+					class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-[var(--accent-text)] bg-[var(--accent)] hover:bg-[var(--accent-hover)] shadow-xs transition-colors"
 				>
 					<Icon name="github" size={15} />
 					<span>{#if project.links.backend}Frontend Repository{:else}View Source Code{/if}</span>
@@ -104,7 +133,7 @@
 	<!-- Overview Section -->
 	{#if project.overview}
 		<section class="space-y-3">
-			<h2 class="text-lg sm:text-xl font-bold tracking-tight text-[var(--text-main)]">
+			<h2 class="text-base sm:text-lg font-semibold tracking-tight text-[var(--text-main)]">
 				Overview & Architecture
 			</h2>
 			<p class="text-sm sm:text-base text-[var(--text-muted)] leading-relaxed">
@@ -116,7 +145,7 @@
 	<!-- Architecture / Technical Approach Section -->
 	{#if project.approach}
 		<section class="space-y-3 p-5 sm:p-6 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border-main)]">
-			<h2 class="text-base sm:text-lg font-bold tracking-tight text-[var(--text-main)] flex items-center gap-2">
+			<h2 class="text-base sm:text-lg font-semibold tracking-tight text-[var(--text-main)] flex items-center gap-2">
 				<Icon name="terminal" size={18} class="text-[var(--text-muted)]" />
 				<span>Technical Design & Implementation</span>
 			</h2>
@@ -128,7 +157,7 @@
 
 	<!-- Highlights Section -->
 	<section class="space-y-4">
-		<h2 class="text-lg sm:text-xl font-bold tracking-tight text-[var(--text-main)]">
+		<h2 class="text-base sm:text-lg font-semibold tracking-tight text-[var(--text-main)]">
 			Key Engineering Highlights
 		</h2>
 		<ul class="space-y-3 list-none">

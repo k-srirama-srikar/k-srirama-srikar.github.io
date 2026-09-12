@@ -7,14 +7,14 @@
     "endDate": "2026-04",
     "category": "Systems & Graphics",
     "stack": ["C++23", "SDL3", "Lua 5.4", "libcurl", "CMake"],
-    "summary": "A from-scratch lightweight browser engine built in modern C++23, featuring custom tokenization, DOM tree representation, Flexbox-inspired layout, and an embedded Lua 5.4 scripting runtime.",
-    "overview": "Built as part of Tech GC at IIT Palakkad, Browser-- is a lightweight, high-performance browser engine written entirely from scratch in modern C++23. Unlike web wrappers, it implements its own parser, hierarchical DOM data structure, box model layout calculator, SDL3 hardware-accelerated renderer, and embedded Lua scripting runtime that provides reactive client-side interactivity.",
+    "summary": "Engineered a lightweight, hardware-accelerated browser engine in modern C++23 from first principles, featuring custom HTML/JSON tokenization, recursive box-model & Flexbox layout computation, multi-tab isolation (up to 32 contexts), and an embedded Lua 5.4 scripting runtime with direct C++ DOM bindings.",
+    "overview": "Built as part of Tech GC at IIT Palakkad, Browser-- is a lightweight, high-performance browser engine written entirely from scratch in modern C++23. Unlike web wrappers, it implements its own lexical tokenizer, hierarchical DOM tree representation, box-model & flexbox layout calculator, SDL3 hardware-accelerated rasterizer, and embedded Lua scripting runtime that provides reactive client-side interactivity.",
     "highlights": [
-      "Built a complete browser engine with a JSON/HTML-based parser, DOM-like element tree, Flexbox-inspired layout engine, and smooth viewport scrolling.",
-      "Implemented an embedded Lua 5.4 runtime with isolated per-tab execution contexts, DOM querying and mutation APIs, event callbacks, and reactive content updates.",
-      "Designed a robust multi-tab architecture supporting up to 32 tabs with isolated DOM state, Lua runtime environments, event dispatchers, URL history, scrolling state, and asynchronous HTTP/HTTPS resource loading with caching."
+      "Built a modular rendering and layout engine from scratch in C++23, featuring custom lexical analysis, hierarchical DOM tree construction, and recursive box-model & Flexbox alignment passes.",
+      "Implemented an embedded Lua 5.4 execution runtime with isolated per-tab environments, two-way C++/Lua DOM bindings, and event-driven reactive DOM mutation APIs.",
+      "Architected a multi-tab runtime managing up to 32 concurrent tabs with state isolation, URL history tracking, non-blocking asynchronous HTTP/HTTPS resource fetching via libcurl, and SDL3 hardware-accelerated rasterization."
     ],
-    "approach": "The core engine architecture decouples layout and rendering into a clean multi-stage pipeline: (1) Lexical analysis and document tree construction, (2) Layout computation with recursive box-model and flexbox alignment passes, and (3) SDL3 rasterization with viewport clipping. For interactivity, each tab creates an isolated Lua state and binds C++ callbacks directly to Lua tables representing DOM nodes. Asynchronous networking via libcurl ensures resource downloads do not block UI dispatch or rendering loops.",
+    "approach": "The core engine architecture decouples layout computation and rendering into a clean multi-stage pipeline: (1) Lexical analysis and document tree construction, (2) Layout computation with recursive box-model and flexbox alignment passes, and (3) SDL3 rasterization with viewport clipping. For interactivity, each tab creates an isolated Lua state and binds C++ callbacks directly to Lua tables representing DOM nodes. Asynchronous networking via libcurl ensures resource downloads do not block UI dispatch or rendering loops.",
     "links": {
       "github": "https://github.com/k-srirama-srikar/browser-minus-minus"
     },
@@ -28,14 +28,14 @@
     "endDate": "2026-05",
     "category": "Compilers & Systems",
     "stack": ["OCaml", "Menhir", "ocamllex", "Dune", "MIPS Assembly"],
-    "summary": "A complete optimizing compiler pipeline from Tiger language to MIPS assembly, implementing lexing, LALR parsing, type checking, intermediate representation (Tree IR), and graph-coloring register allocation.",
-    "overview": "Developed as an in-depth course project for Compiler Design at IIT Palakkad, this compiler translates Tiger, a statically typed imperative programming language with nested functions, arrays, records, and heap allocation, into SPIM-compatible MIPS assembly. The project spans every phase of modern compiler engineering using pure functional OCaml.",
+    "summary": "Developed an end-to-end optimizing compiler for the Tiger language targeting SPIM-compatible MIPS assembly in pure functional OCaml, incorporating lexical analysis (ocamllex), LALR parsing (Menhir), static escape analysis, Appel's Tree IR canonicalization, and graph-coloring register allocation with spill handling.",
+    "overview": "Engineered as an in-depth systems project for Compiler Design at IIT Palakkad, this compiler translates Tiger—a statically typed imperative programming language with nested functions, arrays, records, and heap allocation—into SPIM-compatible MIPS assembly. The project spans every phase of modern compiler engineering using pure functional OCaml.",
     "highlights": [
-      "Implemented a complete Tiger-to-MIPS compiler pipeline spanning lexical analysis, parsing, semantic processing, intermediate representation, and SPIM-compatible code generation.",
-      "Built IR lowering, canonicalization, and stack-based register allocation with spill handling for expressions, control flow, loops, function calls, and runtime operations.",
-      "Designed static escape analysis for variables in nested function scopes and generated activation frames adhering to MIPS calling conventions."
+      "Engineered a complete Tiger-to-MIPS compiler pipeline spanning lexical analysis (ocamllex), LALR parsing (Menhir), semantic processing, intermediate representation, and SPIM-compatible code generation.",
+      "Designed semantic type checking and static escape analysis to dynamically construct static link activation frames for nested lexical scopes adhering to MIPS calling conventions.",
+      "Implemented Appel's Tree Intermediate Representation (IR), basic-block canonicalization, maximal-munch instruction selection, and Chaitin-Briggs graph-coloring register allocation with spill minimization."
     ],
-    "approach": "The compiler frontend uses ocamllex and Menhir to produce typed Abstract Syntax Trees with exact source span tracking. Semantic analysis performs type checking and escape analysis before translating AST nodes into Appel's Tree Intermediate Representation. The backend canonicalizes Tree IR into basic blocks and traces, performs maximal munch instruction selection for the target MIPS ISA, and executes interference-graph-based register allocation with spilling.",
+    "approach": "The compiler frontend uses ocamllex and Menhir to produce typed Abstract Syntax Trees with exact source span tracking. Semantic analysis performs type checking and escape analysis before translating AST nodes into Appel's Tree Intermediate Representation. The backend canonicalizes Tree IR into basic blocks and traces, performs maximal-munch instruction selection for the target MIPS ISA, and executes interference-graph-based register allocation with spilling.",
     "links": {
       "note": "Course Project: Private GitLab Repository (Source available on request)"
     },
@@ -44,17 +44,17 @@
   {
     "slug": "ride-sharing-application",
     "title": "Ride Sharing & Pooling Platform",
-    "featured": true,
+    "featured": false,
     "startDate": "2025-03",
     "endDate": "2025-04",
     "category": "Distributed Systems & Backend",
     "stack": ["React", "Django REST Framework", "PostgreSQL", "PostGIS", "JWT"],
-    "summary": "A scalable mobility and carpooling platform backend featuring sub-10ms geospatial driver-rider matching via PostGIS GiST spatial indexing, transactional seat reservation, and secure JWT authentication.",
+    "summary": "Architected a scalable mobility and carpooling platform backend featuring sub-10ms geospatial driver-rider matching via PostGIS GiST spatial indexing (ST_DWithin), concurrent transaction isolation for zero-overbooking seat allocation, and JWT-authenticated REST APIs.",
     "overview": "An end-to-end carpooling coordination and real-time geospatial matching platform. Engineered with Django REST Framework and PostgreSQL/PostGIS, the backend optimizes driver routing, spatial radius queries, concurrent seat reservation, and secure payment processing.",
     "highlights": [
-      "Built a backend-focused ride-sharing and pooling platform with Django REST APIs for rider/driver management, ride lifecycle, pooling, payments, ratings, and authentication.",
-      "Implemented geospatial matching and driver-location queries using PostGIS types and GiST indexes, with relational state models for rides, pooled capacity, driver availability, and payments.",
-      "Ensured ACID consistency across concurrent ride bookings with transactional database locking and capacity checks."
+      "Architected a RESTful mobility platform backend with Django REST Framework, orchestrating rider/driver lifecycles, pooled route scheduling, payments, and JWT session authentication.",
+      "Engineered sub-10ms driver discovery and geospatial proximity queries using PostGIS Geography types and GiST spatial indexes with optimized ST_DWithin filters.",
+      "Enforced ACID consistency across concurrent seat reservations using explicit database row-level locking and atomic transactions, eliminating overbooking race conditions under high concurrency."
     ],
     "approach": "Driver matching queries utilize spatial GiST indices on PostGIS Geography types with ST_DWithin to identify eligible drivers within dynamic radiuses under sub-10ms response times. Ride pooling calculates route overlaps and capacity constraints within a database transaction boundary to eliminate overbooking conditions.",
     "links": {
@@ -70,13 +70,13 @@
     "endDate": "2024-08",
     "category": "Full-Stack Web Engineering",
     "stack": ["ReactJS", "Go", "Go Fiber", "PostgreSQL", "pgxpool", "JWT", "Axios", "Markdown"],
-    "summary": "A full-stack blogging and developer publishing platform engineered with ReactJS, Go Fiber, and PostgreSQL, featuring Markdown rendering, recursive nested discussions up to depth 5, JWT authentication, and high-performance connection pooling.",
+    "summary": "Engineered a full-stack developer publishing platform featuring a high-throughput, zero-allocation Go Fiber REST API, React frontend, recursive hierarchical discussion trees up to depth 5, pgxpool connection pooling with sub-millisecond database queries, and live Markdown authoring.",
     "overview": "Neo-Logs is a full-stack, markdown-native publishing and community blogging platform designed for technical authors. The architecture pairs a responsive ReactJS SPA on the frontend with a high-throughput, low-latency Go backend powered by Go Fiber and PostgreSQL via pgxpool. The platform provides full authoring lifecycles, tag-based discovery, user follow graphs, and recursive comment trees.",
     "highlights": [
-      "Engineered an interactive ReactJS frontend with live Markdown parsing, tag filtering, customizable author profiles, and real-time form validation.",
-      "Developed a high-performance Go Fiber REST backend with modular route handlers, JWT authentication middleware, and structured request logging.",
-      "Implemented a hierarchical discussion system supporting nested comments up to 5 levels of depth using optimized recursive database queries in PostgreSQL.",
-      "Leveraged pgxpool connection pooling to minimize connection overhead, ensuring sub-millisecond query response times under high read/write concurrency."
+      "Developed a high-throughput Go Fiber REST backend with modular route handlers, zero-allocation routing, JWT auth middleware, and structured request logging.",
+      "Engineered an interactive React frontend with live Markdown rendering, tag filtering, author profiles, and optimistic UI updates.",
+      "Implemented a hierarchical discussion engine supporting nested comment trees up to 5 levels deep using optimized recursive PostgreSQL queries.",
+      "Integrated pgxpool database connection pooling, reducing overhead and maintaining sub-millisecond query response times under high read/write loads."
     ],
     "approach": "The backend utilizes Go Fiber's zero-allocation routing and lightweight middleware for rapid JSON serialization and JWT verification. To support hierarchical comment threads up to depth 5 without N+1 query overhead, the PostgreSQL database schema uses parent-child foreign key references with indexing on post and parent IDs. The React frontend interfaces via an Axios API client with automatic token refreshing and optimistic UI updates for comments and follow interactions.",
     "links": {
@@ -88,20 +88,25 @@
   },
   {
     "slug": "ai-interview-simulator",
-    "title": "AI Interview Simulator",
-    "featured": false,
-    "startDate": "2024",
-    "endDate": "2024",
-    "category": "AI & Audio Engineering",
-    "stack": ["Python", "Google Gemini API", "AssemblyAI", "Speech-to-Text"],
-    "summary": "An automated technical interview practice simulator powered by Google Gemini and AssemblyAI real-time speech-to-text processing.",
+    "title": "Multi-Agent AI Interview Simulator",
+    "featured": true,
+    "startDate": "2024-09",
+    "endDate": "2024-11",
+    "category": "Agentic AI & Systems",
+    "stack": ["Python", "LangGraph", "FastMCP", "Google Gemini", "AssemblyAI", "Streamlit"],
+    "summary": "Engineered an interactive voice-driven mock interview system powered by a multi-agent LangGraph orchestration graph and a standalone Model Context Protocol (MCP) server over stdio, featuring human-in-the-loop pauses, dynamic Agent Skills, rubric scoring, and adaptive steering.",
+    "overview": "An end-to-end voice-driven mock interview platform architected with multi-agent orchestration and the Model Context Protocol (MCP). Replacing conventional monolithic single-prompt chat loops, the platform coordinates three specialized LLM agents (Interviewer, Evaluator, Summarizer) through a LangGraph state graph. Human-in-the-loop pauses preserve state while awaiting candidate spoken answers, and an independent FastMCP server encapsulates portable tools for resume parsing, role-tailored Agent Skills, structured rubric scoring, and fallback question retrieval.",
     "highlights": [
-      "Real-time voice processing and AI-driven feedback loop evaluating technical candidate responses."
+      "Architected a multi-agent orchestration state machine with LangGraph, employing checkpointers and `interrupt_before` hooks to achieve robust human-in-the-loop execution while awaiting voice transcription.",
+      "Engineered an out-of-process Model Context Protocol (MCP) server using FastMCP over stdio, providing decoupled, portable tools for resume parsing, 1–5 rubric scoring, and question bank lookup.",
+      "Implemented Claude-style dynamic Agent Skills (`technical_swe`, `data_ml`, `behavioral`) loaded into context on-demand to prevent prompt token bloat and maintain domain-specific rigor.",
+      "Integrated real-time vocal transcription and speech-to-text with Google Gemini LLM reasoning and Streamlit, delivering dynamic technical follow-ups and comprehensive candidate scorecards."
     ],
+    "approach": "The platform decouples user interaction from agent orchestration and tool execution: (1) The Streamlit frontend captures candidate voice responses and feeds transcribed text into graph state, (2) The LangGraph engine unblocks the human-in-the-loop pause and passes execution to the evaluator agent, (3) The evaluator issues MCP tool calls over stdio to score answers against rubric criteria, and (4) The interviewer agent dynamically synthesizes follow-up questions tailored to prior answers or transitions to the summarizer agent for final assessment.",
     "links": {
       "github": "https://github.com/k-srirama-srikar/AI-Interview-Simulator"
     },
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "lens-and-photo-editor",
@@ -111,9 +116,11 @@
     "endDate": "2024",
     "category": "Computer Vision",
     "stack": ["Python", "OpenCV", "Tkinter", "NumPy"],
-    "summary": "A desktop image manipulation application featuring facial landmark detection, dynamic Snapchat-style AR filters, and editing filters.",
+    "summary": "Engineered a real-time computer vision desktop application with OpenCV, NumPy, and Tkinter, featuring facial landmark detection, dynamic AR filters at 30+ FPS, and comprehensive image editing controls.",
+    "overview": "A desktop image processing and augmented reality application. Employs OpenCV cascade classifiers and NumPy matrix transformations to track facial landmarks and overlay animated AR effects on live video feeds in real time.",
     "highlights": [
-      "Real-time webcam video stream processing and filter overlays using OpenCV cascade classifiers."
+      "Implemented real-time video stream processing and facial landmark tracking at 30+ FPS using OpenCV Haar cascades and matrix operations.",
+      "Designed interactive GUI controls in Tkinter for filter manipulation, color adjustments, edge detection, and image export."
     ],
     "links": {
       "github": "https://github.com/k-srirama-srikar/Lens-and-Photo-Editor-Application"

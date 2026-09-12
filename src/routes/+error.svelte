@@ -23,7 +23,7 @@
 	<div class="mt-8 flex items-center gap-4">
 		<a
 			href="/"
-			class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-[var(--accent)] hover:bg-[var(--accent-hover)] shadow-xs transition-colors"
+			class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-[var(--accent-text)] bg-[var(--accent)] hover:bg-[var(--accent-hover)] shadow-xs transition-colors"
 		>
 			<Icon name="arrow-left" size={16} />
 			<span>Return Home</span>

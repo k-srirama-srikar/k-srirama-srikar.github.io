@@ -11,10 +11,10 @@
     "website": "https://www.ti.com",
     "skills": ["Apache Spark", "PySpark", "Apache Iceberg", "Kafka", "Oracle", "Python", "Data Lake"],
     "bullets": [
-      "Migrated Customer Hierarchy and Customer Master transformations from 2 Oracle packages and 1 function to Spark micro-batch pipelines, processing hundreds of thousands to multi-million-row source tables through point-in-time Iceberg tables and 4-5 self-joins, with output validation against the existing Oracle implementation and reducing the storage footprint by 10x.",
-      "Optimized storage of an on-premises Apache Iceberg data lake from 140 TB to 70 TB by automating daily snapshot expiration and orphan-file cleanup across Bronze/Silver/Gold tables, with targeted metadata cleanup for critical tables to keep storage growth sustainable.",
-      "Automated detection of stalled Spark workloads across 200+ tables by building a Kafka-driven PySpark monitoring pipeline that aggregated 30-minute activity into 2-hour and 1-day windows, applied per-table staleness thresholds, and triggered Webex alerts through an API.",
-      "Restored 5-6 failing production jobs by tracing type-casting regressions through shared pipeline logic, creating a versioned compatible implementation, and updating 3-4 dependent integration points."
+      "Rebuilt the Customer Hierarchy and Customer Master data pipelines, converting 2 Oracle packages and 1 function into Spark micro-batch jobs with multi-way self-joins across core sales tables and point-in-time Iceberg tables to preserve historical state; validated output row-for-row against the legacy pipeline and removed dead code carried over from the original implementation.",
+      "Engineered a Kafka-driven PySpark alerting service that detects stalled Spark jobs across 200+ tables: consumed a Kafka topic, aggregated per-table activity into rolling 2-hour and 1-day windows, applied per-table staleness thresholds, and triggered Webex alerts via API, scheduled on Airflow every 30 minutes.",
+      "Diagnosed a type-casting regression breaking 5 production Spark jobs by tracing it through shared pipeline logic to its root cause, then shipped a corrected, versioned implementation and repointed 4 dependent integration points to restore the jobs without disrupting unaffected consumers.",
+      "Extended and debugged an existing Iceberg maintenance pipeline (daily orphan-file cleanup and snapshot expiration on Airflow/Kubernetes) by fixing bugs and onboarding additional Bronze/Silver/Gold tables; the resulting one-time cleanup brought the on-premises data lake from ~140 TB to ~70 TB, a level the daily automation has since maintained."
     ]
   }
 ]

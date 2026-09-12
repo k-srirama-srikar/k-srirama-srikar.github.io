@@ -32,7 +32,7 @@
 
 			<div>
 				<!-- Primary Prominence: Organization Name -->
-				<h3 class="text-base sm:text-lg font-bold text-[var(--text-main)]">
+				<h3 class="text-sm sm:text-base font-semibold text-[var(--text-main)]">
 					{position.org}
 				</h3>
 

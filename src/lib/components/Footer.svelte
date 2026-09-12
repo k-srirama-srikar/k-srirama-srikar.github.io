@@ -19,7 +19,7 @@
 					</div>
 				</div>
 				<p class="text-sm text-[var(--text-muted)] max-w-md leading-relaxed">
-					Interested in discussing software engineering, systems design, distributed pipelines, or competitive programming? Feel free to reach out.
+					Open to software engineering and data engineering opportunities.
 				</p>
 			</div>
 
@@ -27,7 +27,7 @@
 			<div class="flex flex-col md:items-end justify-center space-y-4">
 				<a
 					href="mailto:{profileData.email}"
-					class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-base font-semibold text-white bg-[var(--accent)] hover:bg-[var(--accent-hover)] shadow-xs transition-all hover:translate-y-[-1px]"
+					class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-base font-semibold text-[var(--accent-text)] bg-[var(--accent)] hover:bg-[var(--accent-hover)] shadow-xs transition-all hover:translate-y-[-1px]"
 				>
 					<Icon name="mail" size={18} />
 					<span>{profileData.email}</span>
@@ -53,7 +53,9 @@
 		<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--text-faint)] font-mono">
 			<p>© {currentYear} {profileData.fullName}. All rights reserved.</p>
 			<p class="flex items-center gap-2">
-				<span>Designed with precision</span>
+				<span>Designed with Svelte</span>
+				<span>·</span>
+				<span>Made with </span>
 				<span>·</span>
 				<a href="https://github.com/k-srirama-srikar/k-srirama-srikar.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--accent)] underline transition-colors">
 					View Source

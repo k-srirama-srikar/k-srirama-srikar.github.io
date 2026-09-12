@@ -30,7 +30,7 @@
 
 			<div>
 				<!-- Primary Prominence: Company Name (no hyperlink) -->
-				<h3 class="text-lg sm:text-xl font-bold text-[var(--text-main)]">
+				<h3 class="text-base sm:text-lg font-semibold text-[var(--text-main)]">
 					{entry.company}
 				</h3>
 				<!-- Role Underneath -->

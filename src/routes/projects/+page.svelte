@@ -4,7 +4,28 @@
 	import type { Project } from '$lib/types';
 	import rawProjects from '$lib/data/projects.json';
 
+	import SEO from '$lib/components/SEO.svelte';
+	import { SITE_URL, createBreadcrumbSchema } from '$lib/seo';
+
 	const projects = rawProjects as Project[];
+
+	const breadcrumbSchema = createBreadcrumbSchema([
+		{ name: 'Home', url: `${SITE_URL}/` },
+		{ name: 'Projects', url: `${SITE_URL}/projects` }
+	]);
+
+	const projectListSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'ItemList',
+		name: 'Software Projects by Kakaraparty Srirama Srikar',
+		itemListElement: projects.map((p, idx) => ({
+			'@type': 'ListItem',
+			position: idx + 1,
+			name: p.title,
+			description: p.summary,
+			url: `${SITE_URL}/projects/${p.slug}`
+		}))
+	};
 
 	let selectedCategory = $state('All');
 	let searchQuery = $state('');
@@ -25,15 +46,17 @@
 	);
 </script>
 
-<svelte:head>
-	<title>Projects · Kakaraparty Srirama Srikar</title>
-	<meta name="description" content="Selected and open-source projects across systems programming, compilers, data infrastructure, and web applications." />
-</svelte:head>
+<SEO
+	title="Software Engineering & Systems Projects · Kakaraparty Srirama Srikar"
+	description="Featured engineering systems, optimizing compilers, distributed backends, and open-source software built by Kakaraparty Srirama Srikar (IIT Palakkad)."
+	canonicalUrl="{SITE_URL}/projects"
+	structuredData={[breadcrumbSchema, projectListSchema]}
+/>
 
 <div class="py-8 sm:py-12 space-y-8">
 	<!-- Page Header -->
 	<div class="border-b border-[var(--border-subtle)] pb-6">
-		<h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text-main)]">
+		<h1 class="text-2xl sm:text-3xl font-semibold tracking-tight text-[var(--text-main)]">
 			Projects
 		</h1>
 		<p class="mt-2 text-sm sm:text-base text-[var(--text-muted)] max-w-2xl">
@@ -49,7 +72,7 @@
 				<button
 					type="button"
 					onclick={() => (selectedCategory = category)}
-					class="px-3 py-1 rounded-md text-xs font-medium whitespace-nowrap transition-colors {selectedCategory === category ? 'bg-[var(--accent)] text-white shadow-xs' : 'bg-[var(--bg-surface)] text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-surface-hover)] border border-[var(--border-main)]'}"
+					class="px-3 py-1 rounded-md text-xs font-medium whitespace-nowrap transition-colors {selectedCategory === category ? 'bg-[var(--accent)] text-[var(--accent-text)] font-semibold shadow-xs' : 'bg-[var(--bg-surface)] text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-surface-hover)] border border-[var(--border-main)]'}"
 				>
 					{category}
 				</button>

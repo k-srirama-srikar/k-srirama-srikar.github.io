@@ -10,8 +10,8 @@
     "logo": "/images/education/iit-palakkad.png",
     "website": "https://iitpkd.ac.in",
     "highlights": [
-      "Relevant Coursework: Data Structures & Algorithms, Compiler Design, Database Management Systems, Computer Systems, Machine Learning, Deep Learning, Big Data, Information Retrieval, Data Analytics, Computer Graphics, GPU Programming, Cryptography.",
-      "Head of Yet Another Coding Club (YACC), the official coding club of IIT Palakkad, directing hackathons, competitive programming workshops and bootcamps."
+      "Relevant Coursework: Data Structures & Algorithms, Compiler Design, Database Management Systems, Computer Systems, Machine Learning, Deep Learning, Big Data, Information Retrieval, Computer Graphics, GPU Programming, Cryptography.",
+      "Leadership: Head of Yet Another Coding Club (YACC), the official programming club of IIT Palakkad"
     ]
   },
   {
@@ -24,8 +24,8 @@
     "gpa": "92.3%",
     "logo": "/images/education/sri-surya.svg",
     "highlights": [
-      "Secured All India Rank of 5609 in JEE Advanced 2023.",
-      "Secured All India Rank of 5996 (99.49 percentile) in JEE Main 2023."
+      "Secured All India Rank 5,609 in JEE Advanced 2023 (Top 3 percentile nationwide).",
+      "Secured All India Rank 5,996 in JEE Main 2023 (99.49 percentile nationwide among 1.1M+ candidates)."
     ]
   },
   {
@@ -38,8 +38,9 @@
     "gpa": "98.0%",
     "logo": "/images/education/de-paul.svg",
     "highlights": [
-      "Activities: Quiz Club Member, NCC (National Cadet Corps), Einstein Science Club",
-      "Achievements : Stood 2nd, 3rd, 5th in Hindu Young World Quiz (Visakhapatnam Chapter) in the years 2016, 2018 and 2019 respectively"
+      "Graduated with 98.0% in ICSE (Class 10 Board Examination).",
+      "Stood 2nd, 3rd, and 5th in the prestigious Hindu Young World Quiz (Visakhapatnam Chapter) in 2016, 2018, and 2019.",
+      "Active Member: National Cadet Corps (NCC), Quiz Club, and Einstein Science Club."
     ]
   }
 ]

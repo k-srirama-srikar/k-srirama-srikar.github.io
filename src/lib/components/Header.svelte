@@ -7,13 +7,14 @@
 	let isDrawerOpen = $state(false);
 
 	const navItems = [
+		{ label: 'About', href: '/#about' },
 		{ label: 'Experience', href: '/#experience' },
 		{ label: 'Education', href: '/#education' },
 		{ label: 'Projects', href: '/projects' },
 		{ label: 'Skills', href: '/#skills' },
+		{ label: 'Leadership', href: '/#leadership' },
 		{ label: 'Achievements', href: '/#achievements' },
 		{ label: 'Coding Profiles', href: '/coding-profiles' },
-		{ label: 'Leadership', href: '/#leadership' },
 		{ label: 'Contact', href: '/#contact' }
 	];
 </script>
@@ -21,7 +22,7 @@
 <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[var(--bg-page)]/90 border-b border-[var(--border-main)] transition-colors">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
 		<!-- Left: Brand / Avatar + Full Name -->
-		<a href="/" class="flex items-center gap-3 font-bold text-[var(--text-main)] hover:text-[var(--accent)] transition-colors group min-w-0">
+		<a href="/" class="flex items-center gap-3 font-semibold text-[var(--text-main)] hover:text-[var(--accent)] transition-colors group min-w-0">
 			<img
 				src={profileData.avatar}
 				alt={profileData.fullName}
@@ -42,7 +43,7 @@
 				href={profileData.resumeUrl}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium text-white bg-[var(--accent)] hover:bg-[var(--accent-hover)] shadow-xs transition-colors"
+				class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold text-[var(--accent-text)] bg-[var(--accent)] hover:bg-[var(--accent-hover)] shadow-xs transition-colors"
 			>
 				<Icon name="download" size={14} />
 				<span>Resume</span>

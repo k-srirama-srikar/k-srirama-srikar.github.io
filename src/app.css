@@ -1,57 +1,113 @@
 @import 'tailwindcss';
-@import '@fontsource/source-serif-4/400.css';
-@import '@fontsource/source-serif-4/500.css';
-@import '@fontsource/source-serif-4/600.css';
-@import '@fontsource/source-serif-4/700.css';
-@import '@fontsource/newsreader/400.css';
-@import '@fontsource/newsreader/500.css';
-@import '@fontsource/newsreader/600.css';
+@import '@fontsource/roboto-serif/400.css';
+@import '@fontsource/roboto-serif/500.css';
+@import '@fontsource/roboto-serif/600.css';
+@import '@fontsource/roboto-serif/700.css';
 @import '@fontsource/fira-mono';
 
 @layer base {
   :root {
-    --bg-page: #FAFAF8;
-    --bg-surface: #FFFFFF;
-    --bg-surface-hover: #F5F5F0;
-    --bg-surface-subtle: #F1F0EA;
-    --border-main: #E2E0D8;
-    --border-subtle: #ECE9E1;
-    --text-main: #0B0C0E;
-    --text-muted: #2E323B;
-    --text-faint: #525764;
-    --accent: #1D4ED8;
-    --accent-hover: #1E40AF;
-    --accent-subtle: #EFF4FF;
-    --accent-border: #BFDBFE;
-    --badge-bg: #EFEFEA;
-    --badge-text: #2E323B;
-    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
-    --card-shadow-hover: 0 4px 12px -2px rgba(0, 0, 0, 0.08), 0 2px 6px -2px rgba(0, 0, 0, 0.04);
+    /* Catppuccin Latte (Light Mode) */
+    --ctp-rosewater: #dc8a78;
+    --ctp-flamingo: #dd7878;
+    --ctp-pink: #ea76cb;
+    --ctp-mauve: #8839ef;
+    --ctp-red: #d20f39;
+    --ctp-maroon: #e64553;
+    --ctp-peach: #fe640b;
+    --ctp-yellow: #df8e1d;
+    --ctp-green: #40a02b;
+    --ctp-teal: #179299;
+    --ctp-sky: #04a5e5;
+    --ctp-sapphire: #209fb5;
+    --ctp-blue: #1e66f5;
+    --ctp-lavender: #7287fd;
+    --ctp-text: #4c4f69;
+    --ctp-subtext1: #5c5f77;
+    --ctp-subtext0: #6c6f85;
+    --ctp-overlay2: #7c7f93;
+    --ctp-overlay1: #8c8fa1;
+    --ctp-overlay0: #9ca0b0;
+    --ctp-surface2: #acb0be;
+    --ctp-surface1: #bcc0cc;
+    --ctp-surface0: #ccd0da;
+    --ctp-base: #eff1f5;
+    --ctp-mantle: #e6e9ef;
+    --ctp-crust: #dce0e8;
+
+    --bg-page: #f5f6f9;
+    --bg-surface: #ffffff;
+    --bg-surface-hover: #eaedf3;
+    --bg-surface-subtle: #f0f2f7;
+    --border-main: #cfd4df;
+    --border-subtle: #e2e6ee;
+    --text-main: #090a0d; /* Crisp near-black for primary headings & titles */
+    --text-muted: #181920; /* Deep dark tone, very close to black for body & bullets */
+    --text-faint: #2c2e38; /* Dark charcoal, high-contrast metadata & labels */
+    --accent: #1e66f5;
+    --accent-hover: #04a5e5;
+    --accent-subtle: #edf2fe;
+    --accent-border: #7287fd;
+    --accent-text: #ffffff; /* Crisp white on vibrant blue */
+    --badge-bg: #eaedf3;
+    --badge-text: #090a0d;
+    --card-shadow: 0 1px 3px 0 rgba(18, 19, 23, 0.06), 0 1px 2px -1px rgba(18, 19, 23, 0.04);
+    --card-shadow-hover: 0 4px 12px -2px rgba(18, 19, 23, 0.1), 0 2px 6px -2px rgba(18, 19, 23, 0.05);
   }
 
   html.dark {
-    --bg-page: #0C0D11;
-    --bg-surface: #13151D;
-    --bg-surface-hover: #1A1D27;
-    --bg-surface-subtle: #171923;
-    --border-main: #252A38;
-    --border-subtle: #1C202C;
-    --text-main: #FCFCFD;
-    --text-muted: #D1D5DB;
-    --text-faint: #9CA3AF;
-    --accent: #3B82F6;
-    --accent-hover: #60A5FA;
-    --accent-subtle: #172554;
-    --accent-border: #1E3A8A;
-    --badge-bg: #1A1E2B;
-    --badge-text: #E5E7EB;
-    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
-    --card-shadow-hover: 0 4px 16px -2px rgba(0, 0, 0, 0.6), 0 2px 8px -2px rgba(0, 0, 0, 0.5);
+    /* Catppuccin Mocha (Dark Mode) */
+    --ctp-rosewater: #f5e0dc;
+    --ctp-flamingo: #f2cdcd;
+    --ctp-pink: #f5c2e7;
+    --ctp-mauve: #cba6f7;
+    --ctp-red: #f38ba8;
+    --ctp-maroon: #eba0ac;
+    --ctp-peach: #fab387;
+    --ctp-yellow: #f9e2af;
+    --ctp-green: #a6e3a1;
+    --ctp-teal: #94e2d5;
+    --ctp-sky: #89dceb;
+    --ctp-sapphire: #74c7ec;
+    --ctp-blue: #89b4fa;
+    --ctp-lavender: #b4befe;
+    --ctp-text: #ffffff;
+    --ctp-subtext1: #f3f4f8;
+    --ctp-subtext0: #dce1eb;
+    --ctp-overlay2: #c5cbd8;
+    --ctp-overlay1: #adb4c4;
+    --ctp-overlay0: #939bb0;
+    --ctp-surface2: #585b70;
+    --ctp-surface1: #45475a;
+    --ctp-surface0: #313244;
+    --ctp-base: #1e1e2e;
+    --ctp-mantle: #181825;
+    --ctp-crust: #11111b;
+
+    /* Elevated Dark Canvas Architecture */
+    --bg-page: #171924; /* Refined, slightly lighter dark canvas */
+    --bg-surface: #202433; /* Clearly elevated cards above canvas */
+    --bg-surface-hover: #2a3043;
+    --bg-surface-subtle: #1b1e2a;
+    --border-main: #333a4f;
+    --border-subtle: #252a3b;
+    --text-main: #ffffff; /* Pure crisp white for primary text */
+    --text-muted: #f3f4f8; /* Ultra-bright off-white, very close to white */
+    --text-faint: #dce1eb; /* Bright light slate, very close to white for labels/dates */
+    --accent: #89b4fa;
+    --accent-hover: #b4befe;
+    --accent-subtle: #21293e;
+    --accent-border: #45475a;
+    --accent-text: #0c0e14; /* Near-black ink on pastel blue button */
+    --badge-bg: #2a3043;
+    --badge-text: #ffffff;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.45), 0 1px 2px -1px rgba(0, 0, 0, 0.35);
+    --card-shadow-hover: 0 4px 16px -2px rgba(0, 0, 0, 0.65), 0 2px 8px -2px rgba(0, 0, 0, 0.5);
   }
 
   html {
     scroll-behavior: smooth;
-    font-family: 'Source Serif 4', 'Newsreader', Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-family: 'Roboto Serif', Georgia, Cambria, 'Times New Roman', serif;
     color: var(--text-main);
     background-color: var(--bg-page);
     transition: background-color 0.25s ease, color 0.25s ease;
@@ -62,18 +118,18 @@
     margin: 0;
     background-color: var(--bg-page);
     color: var(--text-main);
-    font-family: 'Source Serif 4', 'Newsreader', Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-family: 'Roboto Serif', Georgia, Cambria, 'Times New Roman', serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
-  /* Refined, dignified headings */
+  /* Refined, softened headings to reduce visual clutter */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Source Serif 4', 'Newsreader', Georgia, serif;
-    font-weight: 600;
-    letter-spacing: -0.015em;
+    font-family: 'Roboto Serif', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.012em;
   }
 
   code, pre, .font-mono {

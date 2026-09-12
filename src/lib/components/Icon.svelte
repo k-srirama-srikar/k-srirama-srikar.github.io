@@ -101,6 +101,24 @@
 		<path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
 	{:else if name === 'check'}
 		<polyline points="20 6 9 17 4 12" />
+	{:else if name === 'briefcase'}
+		<rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+		<path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+	{:else if name === 'book-open'}
+		<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+		<path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+	{:else if name === 'cpu'}
+		<rect width="16" height="16" x="4" y="4" rx="2" />
+		<rect width="6" height="6" x="9" y="9" />
+		<path d="M15 2v2" /><path d="M15 20v2" /><path d="M2 15h2" /><path d="M2 9h2" />
+		<path d="M20 15h2" /><path d="M20 9h2" /><path d="M9 2v2" /><path d="M9 20v2" />
+	{:else if name === 'users'}
+		<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+		<circle cx="9" cy="7" r="4" />
+		<path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+		<path d="M16 3.13a4 4 0 0 1 0 7.75" />
+	{:else if name === 'sparkles'}
+		<path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
 	{:else}
 		<circle cx="12" cy="12" r="10" />
 	{/if}

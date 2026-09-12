@@ -8,25 +8,8 @@
 </script>
 
 <svelte:head>
-	<title>{profileData.displayName} · Software Engineer</title>
-	<meta name="description" content="{profileData.positioningLine}" />
-	<meta name="author" content="{profileData.fullName}" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-	<!-- Open Graph -->
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="{profileData.displayName} · Software Engineer" />
-	<meta property="og:description" content="{profileData.positioningLine}" />
-	<meta property="og:image" content="{profileData.avatar}" />
-	<meta property="og:url" content="https://k-srirama-srikar.github.io/" />
-
-	<!-- Twitter Card -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="{profileData.displayName} · Software Engineer" />
-	<meta name="twitter:description" content="{profileData.positioningLine}" />
-	<meta name="twitter:image" content="{profileData.avatar}" />
-
-	<link rel="icon" href="{profileData.avatar}" />
+	<link rel="icon" type="image/png" href="/images/c2img.png" />
+	<link rel="apple-touch-icon" href="/images/c2img.png" />
 </svelte:head>
 
 <div class="min-h-screen flex flex-col bg-[var(--bg-page)] text-[var(--text-main)] selection:bg-[var(--accent)] selection:text-white transition-colors duration-200">

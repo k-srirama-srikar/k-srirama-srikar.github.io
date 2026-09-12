@@ -33,7 +33,7 @@
 			</div>
 
 			<!-- Project Title -->
-			<h3 class="text-lg sm:text-xl font-bold text-[var(--text-main)] group-hover:text-[var(--accent)] transition-colors">
+			<h3 class="text-base sm:text-lg font-semibold text-[var(--text-main)] group-hover:text-[var(--accent)] transition-colors">
 				{#if project.hasCaseStudy}
 					<a href="/projects/{project.slug}" target="_blank" rel="noopener noreferrer" class="hover:underline">
 						{project.title}
@@ -113,7 +113,7 @@
 				{/if}
 			</div>
 
-			<h4 class="text-base sm:text-lg font-bold text-[var(--text-main)] group-hover:text-[var(--accent)] transition-colors">
+			<h4 class="text-sm sm:text-base font-semibold text-[var(--text-main)] group-hover:text-[var(--accent)] transition-colors">
 				{#if project.hasCaseStudy}
 					<a href="/projects/{project.slug}" target="_blank" rel="noopener noreferrer">
 						{project.title}

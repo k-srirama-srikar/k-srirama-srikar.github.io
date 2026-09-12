@@ -1,17 +1,27 @@
 <script lang="ts">
 	import Icon from '$lib/components/Icon.svelte';
 	import codingProfilesData from '$lib/data/coding-profiles.json';
+	import SEO from '$lib/components/SEO.svelte';
+	import { SITE_URL, createBreadcrumbSchema } from '$lib/seo';
+
+	const breadcrumbSchema = createBreadcrumbSchema([
+		{ name: 'Home', url: `${SITE_URL}/` },
+		{ name: 'Coding Profiles', url: `${SITE_URL}/coding-profiles` }
+	]);
 </script>
 
-<svelte:head>
-	<title>Coding Profiles & Competitive Programming · Kakaraparty Srirama Srikar</title>
-	<meta name="description" content="Competitive programming ratings, problem-solving profiles, and algorithmic contest results on Codeforces, LeetCode, AtCoder, and ICPC." />
-</svelte:head>
+<SEO
+	title="Coding Profiles & Competitive Programming · Kakaraparty Srirama Srikar"
+	description="Competitive programming ratings, algorithmic contest rankings, and problem-solving metrics on Codeforces (Specialist), LeetCode (Knight), AtCoder, and ICPC Amritapuri Regionals."
+	canonicalUrl="{SITE_URL}/coding-profiles"
+	keywords="Codeforces little_ghost, LeetCode k_srirama_srikar, AtCoder sri_sri, ICPC Amritapuri Regionals 2025, Competitive Programming, Kakaraparty Srirama Srikar, Srirama Srikar, IIT Palakkad"
+	structuredData={[breadcrumbSchema]}
+/>
 
 <div class="py-8 sm:py-12 max-w-4xl mx-auto space-y-8">
 	<!-- Page Header -->
 	<div class="border-b border-[var(--border-subtle)] pb-6">
-		<h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text-main)]">
+		<h1 class="text-2xl sm:text-3xl font-semibold tracking-tight text-[var(--text-main)]">
 			Coding Profiles
 		</h1>
 		<p class="mt-2 text-sm sm:text-base text-[var(--text-muted)] max-w-2xl">
@@ -30,7 +40,7 @@
 								<Icon name={profile.id === 'codeforces' ? 'codeforces' : profile.id === 'leetcode' ? 'leetcode' : profile.id === 'atcoder' ? 'atcoder' : 'award'} size={20} />
 							</div>
 							<div>
-								<h2 class="text-lg sm:text-xl font-bold text-[var(--text-main)]">{profile.platform}</h2>
+								<h2 class="text-base sm:text-lg font-semibold text-[var(--text-main)]">{profile.platform}</h2>
 								<p class="text-xs font-mono text-[var(--text-muted)]">@{profile.handle}</p>
 							</div>
 						</div>

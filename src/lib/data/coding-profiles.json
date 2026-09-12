@@ -7,7 +7,7 @@
     "title": "Specialist",
     "rating": "1471",
     "maxRating": "1471",
-    "badgeColor": "text-cyan-500",
+    "badgeColor": "text-cyan-700 dark:text-cyan-300",
     "note": "Regular participant in Div. 2 and Div. 3 rounds."
   },
   {
@@ -18,7 +18,7 @@
     "title": "Knight",
     "rating": "1917",
     "problemsSolved": "500+",
-    "badgeColor": "text-amber-500",
+    "badgeColor": "text-amber-700 dark:text-amber-300",
     "note": "Top 5% globally, solved 500+ problems across DSA categories."
   },
   {
@@ -27,7 +27,7 @@
     "handle": "sri_sri",
     "href": "https://atcoder.jp/users/sri_sri",
     "title": "Active Contestant",
-    "badgeColor": "text-emerald-500",
+    "badgeColor": "text-emerald-700 dark:text-emerald-300",
     "note": "Regular contestant in AtCoder Beginner Contests (ABC)."
   },
   {
@@ -37,6 +37,6 @@
     "href": "https://icpc.global/ICPCID/FME2AJYZ4PU7",
     "title": "Regionalist",
     "note": "ICPC Amritapuri Regionals 2025 Ranked 139/309 Teams.",
-    "badgeColor": "text-indigo-500"
+    "badgeColor": "text-indigo-700 dark:text-indigo-300"
   }
 ]

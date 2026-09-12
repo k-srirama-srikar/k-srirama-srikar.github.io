@@ -23,7 +23,7 @@
 			</div>
 
 			<div>
-				<h3 class="text-base sm:text-lg font-bold text-[var(--text-main)]">
+				<h3 class="text-sm sm:text-base font-semibold text-[var(--text-main)]">
 					{entry.institution}
 				</h3>
 				<p class="text-xs sm:text-sm text-[var(--text-muted)] font-medium mt-0.5">

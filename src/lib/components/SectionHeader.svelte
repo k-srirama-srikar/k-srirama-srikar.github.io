@@ -2,8 +2,8 @@
 	let { title, subtitle = '' }: { title: string; subtitle?: string; tag?: string } = $props();
 </script>
 
-<div class="mb-6">
-	<h2 class="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-main)]">
+<div class="mb-5">
+	<h2 class="text-lg sm:text-xl font-semibold tracking-tight text-[var(--text-main)]">
 		{title}
 	</h2>
 	{#if subtitle}

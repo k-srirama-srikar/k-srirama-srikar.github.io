@@ -2,21 +2,75 @@
   {
     "id": "languages",
     "label": "Programming Languages",
-    "items": ["C", "C++", "Python", "OCaml", "Go", "JavaScript", "TypeScript", "SQL", "Scala"]
+    "items": [
+      "C++",
+      "C",
+      "Python",
+      "Go",
+      "C#",
+      "OCaml",
+      "TypeScript",
+      "JavaScript",
+      "SQL",
+      "Scala"
+    ]
+  },
+  {
+    "id": "agentic-ai",
+    "label": "Agentic AI",
+    "items": [
+      "LangGraph",
+      "Model Context Protocol (MCP)",
+      "Multi-Agent Orchestration",
+      "Google ADK",
+      "LangChain",
+      "Agent Skills",
+      "RAG",
+      "ChromaDB",
+      "Elastic"
+    ]
   },
   {
     "id": "systems-data",
-    "label": "Systems & Data Infrastructure",
-    "items": ["Apache Spark", "Apache Iceberg", "Apache Kafka", "Apache Airflow", "PostgreSQL", "PostGIS", "MongoDB", "Apache Hudi"]
+    "label": "Data Infrastructure & Systems",
+    "items": [
+      "Apache Spark",
+      "PySpark",
+      "Apache Iceberg",
+      "Apache Kafka",
+      "PostgreSQL",
+      "MongoDB",
+      "Apache Airflow",
+      "Apache Hudi"
+    ]
   },
   {
     "id": "web-backend",
-    "label": "Web & Frameworks",
-    "items": ["Svelte", "SvelteKit", "ReactJS", "Django REST Framework", "Flask", "Node.js", "Tailwind CSS", "HTML5", "CSS3"]
+    "label": "Frameworks",
+    "items": [
+      ".NET",
+      "Django",
+      "FastAPI",
+      "Svelte",
+      "React",
+      "Node.js",
+      "Flask"
+    ]
   },
   {
     "id": "tools-devops",
-    "label": "Tools & DevOps",
-    "items": ["Git", "Docker", "Kubernetes", "Linux / Bash", "CMake", "Dune", "Jenkins", "Postman", "CI/CD"]
+    "label": "Developer Tools & Systems",
+    "items": [
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "Git",
+      "CMake",
+      "Dune",
+      "Jenkins",
+      "CI/CD",
+      "Postman",
+      "Bash"
+    ]
   }
 ]

@@ -75,7 +75,7 @@
 				href={profileData.resumeUrl}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-[var(--accent)] hover:bg-[var(--accent-hover)] shadow-xs transition-colors"
+				class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-[var(--accent-text)] bg-[var(--accent)] hover:bg-[var(--accent-hover)] shadow-xs transition-colors"
 			>
 				<Icon name="download" size={16} />
 				<span>Resume</span>

@@ -3,12 +3,12 @@
     "id": "icpc-amritapuri-2025",
     "label": "ICPC Amritapuri Regionals 2025",
     "value": "Rank 139 / 309 teams",
-    "detail": "ICPC ID: FME2AJYZ4PU7"
+    "detail": "ICPC Regionalist (ID: FME2AJYZ4PU7)"
   },
   {
     "id": "codeforces-rating",
     "label": "Codeforces",
-    "value": "Specialist (max 1471)",
+    "value": "Specialist (Max 1471)",
     "href": "https://codeforces.com/profile/little_ghost"
   },
   {
@@ -20,13 +20,13 @@
   {
     "id": "jee-advanced-2023",
     "label": "JEE Advanced 2023",
-    "value": "Rank 5,609 / 180,000+",
+    "value": "AIR 5,609 / 180,000+",
     "detail": "Top 3 percentile nationwide"
   },
   {
     "id": "jee-main-2023",
     "label": "JEE Main 2023",
-    "value": "Rank 5,996 / 1,100,000+",
-    "detail": "Top 0.5 percentile nationwide"
+    "value": "AIR 5,996 / 1,100,000+",
+    "detail": "Top 0.5% nationwide (99.49 percentile)"
   }
 ]

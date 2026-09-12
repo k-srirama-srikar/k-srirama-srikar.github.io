@@ -1,0 +1,7 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Host & Sitemap specification
+Host: https://sriramasrikar.dev
+Sitemap: https://sriramasrikar.dev/sitemap.xml
